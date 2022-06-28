@@ -1,14 +1,12 @@
-from random import*
+from random import choice
 def main():
-    x = ""
-    ch = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!?@#$%^&*()-=_+"
-    length = int(input("How long should your password be? "))
-    for i in range (1, length+1):
-        x += choice(ch)
-    print("your password is:",x)
-    o = input("PRESS [ENTER] FOR ANOTHER PASSWORD")
-    if o == "":
-        main()
-    else:
-        exit()
+    a = ""
+    while a == "":
+        pw = "" #empty password
+        ch = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!?@#$%^&*()-=_+" #characters possible in given password
+        l = int(input("How long should your password be? ")) #ask for password lenght
+        for i in range (0, l):pw += choice(ch) #make random password
+        print("your password is:",pw) #say password
+        a = input("PRESS [ENTER] FOR ANOTHER PASSWORD")
+    exit()
 main()
