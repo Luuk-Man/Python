@@ -5,14 +5,14 @@ def main():
     sec = int(input("Hoeveel seconden? "))
     while True:
         print(uur,":", min,":",sec)
-        sec = sec + 1
+        sec += 1
         if sec == 60:
             sec = 0
-            min = min + 1
-        if min == 60:
-            min = 0
-            uur = uur + 1
-        if uur == 24:
-            uur = 0
+            min += 1
+            if min == 60:
+                min = 0
+                uur += 1
+                if uur == 24:
+                    uur = 0
         sleep(1)
 main()
