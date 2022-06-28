@@ -1,12 +1,9 @@
 def main():
-    x = int(input("The factorial of which number? "))
-    y=1
-    for i in range (2, x + 1): #cycles through every number, except 1.
-         y *= i                #multiplies every number that it cycles through
-    print(y)
-    a = input("PRESS [ENTER] for relaunch")
-    if a == "":
-        main()
-    else:
-        exit()
+    a = ""
+    while a == "":
+        f = 1
+        n = int(input("The factorial of which number? "))
+        for i in range (2, n + 1):f *= i #multiplies f by every number from 2 to n
+        print(f)
+        a = input("PRESS [ENTER] for relaunch")
 main()
