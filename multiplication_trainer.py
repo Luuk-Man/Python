@@ -11,10 +11,10 @@ def main():
         print('What is',m1,'times',m2,'?')
         ans = int(input(""))
         if ans == m1 * m2:
-            print("Good Job")
+            print("Good job!")
             good+=1
         else: 
-            print("not quite!")
+            print("Not quite!")
             print("the answer should be:", m1*m2)
             bad+=1
     print(bad, "bad answerds given")
