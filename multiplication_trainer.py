@@ -8,14 +8,14 @@ def main():
     for i in range (0,times):
         m1 = randrange(lowest,highest)
         m2 = randrange(lowest,highest)
-        print('What is',m1,'times',m2,'?')
+        print('What is',m1,'times',str(m2)+'?')
         ans = int(input(""))
         if ans == m1 * m2:
             print("Good job!")
             good+=1
         else: 
             print("Not quite!")
-            print("the answer should be:", m1*m2)
+            print("the answer should be:", str(m1*m2)+"!")
             bad+=1
     print(bad, "bad answerds given")
     print(good,"good answers given")
